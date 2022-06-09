@@ -144,3 +144,7 @@ This code will fill DeComp's memory from starting point of your choice (it input
 		mov counter acm
 	end
 ```
+
+## Usage
+
+To use the compiller, you'll need to run the compiler's .exe file with 2 arguments: <source file> <target file>. If there is no error, the compiller will show you DeComp instructions formatted for readability
