@@ -30,17 +30,12 @@
     <None Include="..\..\..\..\Documents\lpnu\bofc\DeComp\1\DeComp.prg">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="demo.dcl">
+      <Filter>Resource Files</Filter>
+    </None>
     <None Include="target">
       <Filter>Resource Files</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="src">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="test_src">
-      <Filter>Resource Files</Filter>
-    </Text>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

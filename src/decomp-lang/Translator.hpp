@@ -286,11 +286,15 @@ namespace dl {
       push_instruction("store", { .code = "$tmp", .is_variable = true });
       push_instruction("load", { .code = arg.token.value, .is_variable = true });
       push_instruction("add", { .code = "$inst_" + instruction, .is_variable = true });
-      push_instruction("store", { .code = tls::str_to_hex(std::to_string(instructions.size() + 2)) });
+      std::string address = tls::str_to_hex(std::to_string(instructions.size() + 2));
+      address = std::string(3 - address.size(), '0') + address;
+      push_instruction("store", { .code = address });
       push_instruction("load", { .code = "$tmp", .is_variable = true });
       instructions.push_back(Instruction { .command = {.code = "00", .name = "NULL" }, .argumnet = {.code = "00" } });
 
-      global_variables["$inst_" + instruction] = VariableInfo { .value = ds::instructions_map.at(instruction).code + "00" };
+      std::string instruction_code = ds::instructions_map.at(instruction).code;
+      instruction_code += std::string(4 - instruction_code.size(), '0');
+      global_variables["$inst_" + instruction] = VariableInfo { .value = instruction_code };
     }
 
     _CommandArgumentInfo parse_argument(std::vector<Token>::const_iterator &x, const std::vector<Token>::const_iterator end) {

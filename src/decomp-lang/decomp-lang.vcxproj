@@ -144,12 +144,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <Text Include="test_src">
-      <FileType>Document</FileType>
-    </Text>
-    <Text Include="src">
-      <FileType>Document</FileType>
-    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Formatter.hpp" />
@@ -163,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Documents\lpnu\bofc\DeComp\1\DeComp.prg" />
+    <None Include="demo.dcl" />
     <None Include="target" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
